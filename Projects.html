@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Projects</title>
+
+        <style type="text/css">
+
+            @font-face {
+        font-family:Tenor-Sans;
+        src: url(TenorSans-Regular.ttf);
+      }
+        @font-face {
+        font-family:PT-Sans;
+        src: url(PTSans-Regular.ttf);
+      }
+
+      #artwork-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                /* column-gap: 40px; */
+                row-gap: 65px;
+                margin-left: 50px;
+                margin-right: 50px;
+                z-index: 1;
+                padding-top: 80px;
+            }
+
+
+            div.image {
+                width: 640px;
+                height: 440px;
+            }
+
+            div.text_container {
+                width: 640px;
+                height: 440px;
+                font-family: Helvetica;
+                font-size: 3em;
+                color: #ffffff;
+                text-align: center;
+                background-color: rgba(128, 136, 218, 0.5);
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                display: grid;
+            }
+            div.collage_text {
+                width: 1500px;
+                height: 600px;
+                padding-bottom:80px;
+            }
+            div.page_title {
+                width: 1500px;
+                height: 600px;
+                font-family: Tenor-Sans;
+                color:#1232B0;
+                font-size: 150pt;
+                text-align: center;
+                display: grid;
+            }
+            p.description {
+                font-family: Tenor-Sans;
+                Color: #1232B0;
+                font-size: 20pt;
+                padding-top: 70px;
+            }
+            div.text_container:hover {
+                opacity: 1;
+            }
+            p.text {
+                margin: auto;
+            }
+
+            div.collagepagethumbnail {
+                background-image: url(Projects_thumbnail_1500x600.png);
+                background-repeat:no-repeat;
+                padding-bottom: 80px;
+            }
+
+
+            div.OlympicCards-1 {
+                background-image: url(Thumbnail_OlympicCards.png);
+                background-repeat:no-repeat;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+            }
+            div.ItsOkayToBeNotOkay-2 {
+                background-image: url(Thumbnail_ItsOkayToBeNotOkay.png);
+                background-repeat:no-repeat;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+            }
+            div.Abide-3 {
+                background-image: url(Thumbnail_Abide.png);
+                background-repeat:no-repeat;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+            }
+            div.QueenOfTheNight-4 {
+                background-image: url(Thumbnail_QueenOfTheNight.png);
+                background-repeat:no-repeat;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+            }
+            div.SinsAndVirtues-5 {
+                background-image: url(Thumbnail_SinsAndVirtues.png);
+                background-repeat:no-repeat;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+            }
+            div.MyDaily-6 {
+                background-image: url(Thumbnail_MyDaily.png);
+                background-repeat:no-repeat;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+            }
+                            /* Overlay action */
+            /* div.link {
+            position: fixed;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.5);
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+            z-index: 2;
+            }
+            div.link:target {
+                display: flex;
+            } */
+
+            /* a.close-overlay {
+             position: absolute;
+             top: 20px;
+                right: 20px;
+                color: white;
+                font-size: 20px;
+                text-decoration: none;
+                background: rgba(0, 0, 0, 0.7);
+                padding: 10px 15px;
+                border-radius: 5px;
+                } */
+
+        header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color:rgba(128, 136, 218, 0.2);
+        padding-left: 50px;
+      }
+      .menu{
+        text-align: right;
+        font-family:"PT-Sans";
+        font-size: 15pt;
+      }
+
+        </style>
+    </head>
+    <body>
+        <!-- nav -->
+        <header>
+            <nav class="menu">
+                <img src="Logo.png" alt="Janet Tan Logo" width="220" height="55">
+                <a href="index.html">Home</a>
+                <a href="Projects.html">Projects</a>
+                <a href="Illustrations.html">Illustrations</a>
+                <a href="Collages.html">Collages</a>
+                <a href="About.html">About</a>
+            </nav>
+        </header>
+        <!-- Thumbnail -->
+        <div class="collage_text collagepagethumbnail">
+            <div class="page_title">
+                <p class="text">PROJECTS</p>
+                <p class="description">Some of my favorite projects <br> I created at MassArt. </p>
+            </div>
+            <!-- Overlay -->
+            <!-- 1 -->
+            <!-- <div id="overlay-OlympicCards" class="overlay appear">
+                <div class="OlympicCardsbig">
+                    <img src="DungeonMeshi.png" alt="DungeonMeshi" height="700" >
+                <a href="#" class="close-overlay">close</a>
+                </div>
+            </div> -->
+        <!-- 2 -->
+            <!-- <div id="overlay-ItsOkayToBeNotOkay" class="overlay appear">
+                <div class="ItsOkayToBeNotOkaybig">
+                    <img src="Gummi.png" alt="Gummi" height="700">
+                <a href="#" class="close-overlay">close</a>
+                </div>
+            </div> -->
+        <!-- 3 -->
+                <!-- <div id="overlay-Abide" class="link appear">
+                    <div class="Abidebig">
+                        <img src="Pond.png" alt="Pond" height="700">
+                        <a href="#" class="close-overlay">close</a>
+                    </div>
+                </div> -->
+        <!-- 4 -->
+                    <!-- <div id="overlay-QueenOfTheNight" class="link appear">
+                        <div class="QueenOfTheNightbig">
+                        <a href="#" class="close-overlay">close</a>
+                    </div>
+                </div> -->
+        <!-- 5 -->
+                <!-- <div id="overlay-SinsAndVirtues" class="link appear">
+                    <div class="SinsAndVirtuesbig">
+                    <a href="#" class="close-overlay">close</a>
+                </div>
+            </div> -->
+        <!-- 6 -->
+            <!-- <div id="overlay-MyDaily" class="link appear">
+                <div class="MyDailybig">
+                <a href="#" class="close-overlay">close</a>
+            </div>
+        </div> -->
+
+        <!-- Illustration Gallery -->
+        <section id="artwork-grid">
+            <div class="image OlympicCards-1">
+                <a href="Olympic Cards.html">
+                    <div class="text_container">
+                        <p class="text">Olympic Cards</p>
+                    </div>
+                </a>
+            </div>
+            <div class="image ItsOkayToBeNotOkay-2">
+                <a href="It's Okay to be Not Okay.html">
+                <div class="text_container">
+                    <p class="text">Its Okay to be Not Okay </p>
+                </div>
+                </a>
+            </div>
+            <div class="image Abide-3">
+                <a href="Abide.html">
+                <div class="text_container">
+                    <p class="text"> Abide </p>
+                </div>
+                </a>
+            </div>
+            <div class="image QueenOfTheNight-4">
+                <a href="Queen of the Night.html">
+                <div class="text_container">
+                    <p class="text"> Queen of the Night </p>
+                </div>
+                </a>
+            </div>
+            <div class="image SinsAndVirtues-5">
+                <a href="Sins and Virtues.html">
+                <div class="text_container">
+                    <p class="text"> Sins and Virtues </p>
+                </div>
+                </a>
+            </div>
+            <div class="image MyDaily-6">
+                <a href="My Daily_.html">
+                <div class="text_container">
+                    <p class="text"> My Daily_ </p>
+                </div>
+                </a>
+            </div>
+        </section>
+    </body>
+</html>
+
