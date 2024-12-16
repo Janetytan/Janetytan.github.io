@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Collages</title>
+
+        <style type="text/css">
+
+            @font-face {
+        font-family:Tenor-Sans;
+        src: url(TenorSans-Regular.ttf);
+      }
+        @font-face {
+        font-family:PT-Sans;
+        src: url(PTSans-Regular.ttf);
+      }
+
+      #artwork-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+                column-gap: 40px;
+                row-gap: 65px;
+                margin-left: 50px;
+                margin-right: 50px;
+                z-index: 1;
+            }
+
+            div.image {
+                width: 300px; /* you must set a width and height, and it must be the same in the rule below. */
+                height: 300px;
+            }
+            div.text_container {
+                width: 300px; /* you must set a width and height, and it must be the same in the rule above. */
+                height: 300px;
+                font-family: Helvetica;
+                font-size: 3em;
+                color: #ffffff;
+                text-align: center; /* horizontally center the text. */
+                background-color: rgba(128, 136, 218, 0.5); /* create an overlay color, salmon, at 50% opacity. */
+                opacity: 0; /* set the initial appearance of the element to be "invisible." */
+                transition: opacity 0.3s ease; /* add animation for the element's opacity. */
+                display: grid;
+            }
+            div.collage_text {
+                width: 1500px;
+                height: 600px;
+                padding-bottom:80px;
+            }
+            div.page_title {
+                width: 1500px; /* you must set a width and height, and it must be the same in the rule above. */
+                height: 600px;
+                font-family: Tenor-Sans;
+                color:#1232B0;
+                font-size: 150pt;
+                text-align: center;
+                display: grid;
+            }
+            p.description {
+                font-family: Tenor-Sans;
+                Color: #1232B0;
+                font-size: 20pt;
+            }
+            div.text_container:hover {
+                opacity: 1;
+            }
+            p.text {
+                margin: auto;
+            }
+
+            div.collagepagethumbnail {
+                background-image: url(WebDesign_Collage_Thumbnail_gradient_Whitecircle.png);
+                background-repeat:no-repeat;
+            }
+
+
+            div.Fissure-1 {
+                background-image: url(Thumbnail4_Fissure.png);
+            }
+            div.Tranquility-2 {
+                background-image: url(Thumbnail_Tranquility.png);
+            }
+            div.SweedishFish-3 {
+                background-image: url(Thumbnail_SweedishFish.png);
+            }
+            div.stairway-4 {
+                background-image: url(thumbnail_stairway.png);
+            }
+            div.Migration-5 {
+                background-image: url(Thumbnail_Migration.cropped.png);
+            }
+            div.Midnightstrollt-6 {
+                background-image: url(Thumbnail_Midnightstroll.png);
+            }
+            div.Jade-7 {
+                background-image: url(Thumbnail_Jade.png);
+            }
+            div.IntoTheWoods-8 {
+                background-image: url(Thumbnail_IntoTheWoods.png);
+            }
+            div.Goodnightmoon-9 {
+                background-image: url(Thumbnail_Goodnight\ Moon.\ Edited.png);
+            }
+            div.FishMarket-10 {
+                background-image: url(Thumbnail_FishMarket.png);
+            }
+            div.Eclipse-11 {
+                background-image: url(Thumbnail_Eclipse.png);
+            }
+            div.ChaosInTheBeginning-12 {
+                background-image: url(thumbnail_ChaosInTheBeginning.png);
+            }
+            div.BehindTheFlowers-13 {
+                background-image: url(Thumbnail_BehindTheFlowers\ Edited.png);
+            }
+            div.Thumbnail_Alice-14 {
+                background-image: url(Thumbnail_Alice.png);
+            }
+            div.FirstLight-15 {
+                background-image: url(Thumbnail_FirstLight.png);
+            }
+            div.mountains-16 {
+                background-image: url(Thumbnail_mountains.png);
+            }
+                            /* Overlay action */
+             div.overlay {
+            position: fixed;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.5);
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+            z-index: 2;
+            }
+            div.overlay:target {
+                display: flex;
+            }
+
+            a.close-overlay {
+             position: absolute;
+             top: 20px;
+                right: 20px;
+                color: white;
+                font-size: 20px;
+                text-decoration: none;
+                background: rgba(0, 0, 0, 0.7);
+                padding: 10px 15px;
+                border-radius: 5px;
+                }
+
+            div.Fissurebig {
+            position: fixed;
+            display: block;
+            }
+
+            div.Tranquilitybig {
+            position: fixed;
+            display: block;
+            }
+
+            div.SweedishFishbig {
+            position: fixed;
+            display: block;
+            }
+
+            div.Stairwaybig {
+            position: fixed;
+            display: block;
+            }
+
+            div.Migrationbig {
+            position: fixed;
+            display: block;
+            }
+
+            div.MidNightStrollbig {
+            position: fixed;
+            display: block;
+            }
+
+            div.Jadebig {
+            position: fixed;
+            display: block;
+            }
+
+            div.IntoTheWoodsbig {
+            position: fixed;
+            display: block;
+            }
+
+            div.GoodNightMoonbig {
+            position: fixed;
+            display: block;
+            }
+
+            div.FishMarketbig {
+            position: fixed;
+            display: block;
+            }
+
+            div.Eclipsebig {
+            position: fixed;
+            display: block;
+            }
+
+            div.ChaosInTheBeginningbig {
+            position: fixed;
+            display: block;
+            }
+
+            div.BehindTheFlowersbig {
+            position: fixed;
+            display: block;
+            }
+
+            div.Alicebig {
+            position: fixed;
+            display: block;
+            }
+
+            div.FirstLightbig {
+            position: fixed;
+            display: block;
+            }
+
+            div.Mountainsbig {
+            position: fixed;
+            display: block;
+            }
+
+            header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color:rgba(128, 136, 218, 0.2);
+        padding-left: 50px;
+      }
+      .menu{
+        text-align: right;
+        font-family:"PT-Sans";
+        font-size: 15pt;
+      }
+
+        </style>
+    </head>
+    <body>
+        <!-- nav -->
+        <header>
+            <nav class="menu">
+                <img src="Logo.png" alt="Janet Tan Logo" width="220" height="55">
+                <a href="index.html">Home</a>
+                <a href="Projects.html">Projects</a>
+                <a href="Illustrations.html">Illustrations</a>
+                <a href="Collages.html">Collages</a>
+                <a href="About.html">About</a>
+            </nav>
+        </header>
+        <!-- Thumbnail -->
+        <div class="collage_text collagepagethumbnail">
+            <div class="page_title">
+                <p class="text">COLLAGES</p>
+                <p class="description">6 x 6 Collages made <br> with recycled magazines</p>
+            </div>
+            <!-- Overlay -->
+            <!-- 1 -->
+            <div id="overlay-Fissure" class="overlay appear">
+                <div class="Fissurebig">
+                    <img src="Fissure.jpg" alt="Fissure" width="700" height="700">
+                <a href="#" class="close-overlay">close</a>
+                </div>
+            </div>
+        <!-- 2 -->
+            <div id="overlay-Tranquility" class="overlay appear">
+                <div class="Tranquilitybig">
+                    <img src="2Tranquility.jpg" alt="Tranquility" width="700" height="700">
+                    <a href="#" class="close-overlay">close</a>
+                </div>
+            </div>
+        <!-- 3 -->
+                <div id="overlay-SweedishFish" class="overlay appear">
+                    <div class="SweedishFishbig">
+                        <img src="3SweedishFish.jpeg" alt="Fissure" width="700" height="700">
+                        <a href="#" class="close-overlay">close</a>
+                    </div>
+                </div>
+        <!-- 4 -->
+                    <div id="overlay-Stairway" class="overlay appear">
+                        <div class="Stairway">
+                            <img src="4Stairway.jpg" alt="Fissure" width="700" height="700">
+                        <a href="#" class="close-overlay">close</a>
+                    </div>
+                </div>
+        <!-- 5 -->
+                    <div id="overlay-Migration" class="overlay appear">
+                        <div class="Migration">
+                            <img src="5Migration.jpg" alt="Fissure" width="700" height="700">
+                        <a href="#" class="close-overlay">close</a>
+                    </div>
+                </div>
+        <!-- 6 -->
+                    <div id="overlay-MidNightStroll" class="overlay appear">
+                        <div class="MidNightStrollbig">
+                            <img src="6MidnightStroll.png" alt="Fissure" width="700" height="700">
+                        <a href="#" class="close-overlay">close</a>
+                    </div>
+                </div>
+        <!-- 7 -->
+                    <div id="overlay-Jade" class="overlay appear">
+                        <div class="Jadebig">
+                            <img src="7Jade.jpeg" alt="Fissure" width="700" height="700">
+                        <a href="#" class="close-overlay">close</a>
+                    </div>
+                </div>
+        <!-- 8 -->
+                    <div id="overlay-IntoTheWoods" class="overlay appear">
+                        <div class="IntoTheWoodsbig">
+                            <img src="8IntoTheWoods.jpg" alt="Fissure" width="700" height="700">
+                        <a href="#" class="close-overlay">close</a>
+                    </div>
+                </div>
+        <!-- 9 -->
+                    <div id="overlay-GoodNightMoon" class="overlay appear">
+                        <div class="GoodNightMoonbig">
+                            <img src="9Goodnight Moon.jpg" alt="Fissure" width="700" height="700">
+                        <a href="#" class="close-overlay">close</a>
+                    </div>
+                </div>
+        <!-- 10 -->
+                    <div id="overlay-FishMarket" class="overlay appear">
+                        <div class="FishMarketbig">
+                            <img src="10FishMarket.jpeg" alt="Fissure" width="700" height="700">
+                        <a href="#" class="close-overlay">close</a>
+                    </div>
+                </div>
+        <!-- 11 -->
+                <div id="overlay-Eclipse" class="overlay appear">
+                    <div class="Eclipsebig">
+                        <img src="11Eclipse.jpg" alt="Fissure" width="700" height="700">
+                    <a href="#" class="close-overlay">close</a>
+                </div>
+            </div>
+        <!-- 12 -->
+                <div id="overlay-ChaosInTheBeginning" class="overlay appear">
+                    <div class="ChaosInTheBeginningbig">
+                        <img src="12ChaosInTheBeginning.jpeg" alt="Fissure" width="700" height="700">
+                    <a href="#" class="close-overlay">close</a>
+                </div>
+            </div>
+        <!-- 13 -->
+                <div id="overlay-BehindtheFlowers" class="overlay appear">
+                    <div class="BehindTheFlowersbig">
+                        <img src="13BehindTheFlowers.jpg" alt="Fissure" width="700" height="700">
+                    <a href="#" class="close-overlay">close</a>
+                </div>
+            </div>
+        <!-- 14 -->
+                <div id="overlay-Alice" class="overlay appear">
+                    <div class="Alicebig">
+                        <img src="14Alice.jpg" alt="Fissure" width="700" height="700">
+                    <a href="#" class="close-overlay">close</a>
+                </div>
+            </div>
+        <!-- 15 -->
+                <div id="overlay-FirstLight" class="overlay appear">
+                    <div class="FirstLightbig">
+                        <img src="15FirstLight.jpg" alt="Fissure" width="700" height="700">
+                    <a href="#" class="close-overlay">close</a>
+                </div>
+            </div>
+        <!-- 16 -->
+                <div id="overlay-Mountains" class="overlay appear">
+                    <div class="Mountainsbig">
+                        <img src="16Mountains.jpg" alt="Fissure" width="700" height="700">
+                    <a href="#" class="close-overlay">close</a>
+                </div>
+            </div>
+
+        </div>
+        <!-- Collage Gallery -->
+        <section id="artwork-grid">
+            <div class="image Fissure-1">
+                <a href="#overlay-Fissure">
+                    <div class="text_container">
+                        <p class="text">Fissure</p>
+                    </div>
+                </a>
+            </div>
+            <div class="image Tranquility-2">
+                <a href="#overlay-Tranquility">
+                <div class="text_container">
+                    <p class="text">Tranquility</p>
+                </div>
+                </a>
+            </div>
+            <div class="image SweedishFish-3">
+                <a href="#overlay-SweedishFish">
+                <div class="text_container">
+                    <p class="text">Sweedish Fish</p>
+                </div>
+                </a>
+            </div>
+            <div class="image stairway-4">
+                <a href="#overlay-Stairway">
+                <div class="text_container">
+                    <p class="text">Stairway</p>
+                </div>
+                </a>
+            </div>
+            <div class="image Migration-5">
+                <a href="#overlay-Migration">
+                <div class="text_container">
+                    <p class="text">Migration</p>
+                </div>
+                </a>
+            </div>
+            <div class="image Midnightstrollt-6">
+                <a href="#overlay-MidNightStroll">
+                <div class="text_container">
+                    <p class="text">Midnight Stroll</p>
+                </div>
+                </a>
+            </div>
+            <div class="image Jade-7">
+                <a href="#overlay-Jade">
+                <div class="text_container">
+                    <p class="text">Jade</p>
+                </div>
+                </a>
+            </div>
+            <div class="image IntoTheWoods-8">
+                <a href="#overlay-IntoTheWoods">
+                <div class="text_container">
+                    <p class="text">Into the Woods</p>
+                </div>
+                </a>
+            </div>
+            <div class="image Goodnightmoon-9">
+                <a href="#overlay-GoodNightMoon">
+                <div class="text_container">
+                    <p class="text">Good Night Moon</p>
+                </div>
+                </a>
+            </div>
+            <div class="image FishMarket-10">
+                <a href="#overlay-FishMarket">
+                <div class="text_container">
+                    <p class="text">Fish Market</p>
+                </div>
+                </a>
+            </div>
+            <div class="image Eclipse-11">
+                <a href="#overlay-Eclipse">
+                <div class="text_container">
+                    <p class="text">Eclipse</p>
+                </div>
+                </a>
+            </div>
+            <div class="image ChaosInTheBeginning-12">
+                <a href="#overlay-ChaosInTheBeginning">
+                <div class="text_container">
+                    <p class="text">Chaos in the Beginning</p>
+                </div>
+                </a>
+            </div>
+            <div class="image BehindTheFlowers-13">
+                <a href="#overlay-BehindtheFlowers">
+                <div class="text_container">
+                    <p class="text">Behind the Flowers</p>
+                </div>
+                </a>
+            </div>
+            <div class="image Thumbnail_Alice-14">
+                <a href="#overlay-Alice">
+                <div class="text_container">
+                    <p class="text">Alice</p>
+                </div>
+                </a>
+            </div>
+                <div class="image FirstLight-15">
+                    <a href="#overlay-FirstLight">
+                    <div class="text_container">
+                        <p class="text">First <br> Light</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="image mountains-16">
+                    <a href="#overlay-Mountains">
+                    <div class="text_container">
+                        <p class="text">Mountains</p>
+                    </div>
+                </a>
+                </div>
+
+        </section>
+    </body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Illustrations</title>
+
+        <style type="text/css">
+
+            @font-face {
+        font-family:Tenor-Sans;
+        src: url(TenorSans-Regular.ttf);
+      }
+        @font-face {
+        font-family:PT-Sans;
+        src: url(PTSans-Regular.ttf);
+      }
+
+      #artwork-grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+                /* column-gap: 40px; */
+                row-gap: 65px;
+                /* margin-left: 50px;
+                margin-right: 50px; */
+                z-index: 1;
+                padding-top: 80px;
+            }
+
+
+            div.image {
+                width: 1244px;
+                height: 600px;
+            }
+
+            div.text_container {
+                width: 1244px;
+                height: 600px;
+                font-family: Helvetica;
+                font-size: 3em;
+                color: #ffffff;
+                text-align: center;
+                background-color: rgba(128, 136, 218, 0.5);
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                display: grid;
+            }
+            div.collage_text {
+                width: 1500px;
+                height: 600px;
+                padding-bottom:80px;
+            }
+            div.page_title {
+                width: 1500px;
+                height: 600px;
+                font-family: Tenor-Sans;
+                color:#1232B0;
+                font-size: 125pt;
+                text-align: center;
+                display: grid;
+            }
+            p.description {
+                font-family: Tenor-Sans;
+                Color: #1232B0;
+                font-size: 20pt;
+            }
+            div.text_container:hover {
+                opacity: 1;
+            }
+            p.text {
+                margin: auto;
+            }
+
+            div.collagepagethumbnail {
+                background-image: url(Illustration_thumbnail.png);
+                background-repeat:no-repeat;
+                padding-bottom: 80px;
+            }
+
+
+            div.DungeonMeshi-1 {
+                background-image: url(Thumbnail_dungeon\ meshi_digitalIllustration_1144pxx600px.png);
+                background-repeat:no-repeat;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+            }
+            div.Gummi-2 {
+                background-image: url(Thumbnail__Gummi.png);
+                background-repeat:no-repeat;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+            }
+            div.Pond-3 {
+                background-image: url(Thumbnail__Pond.png);
+                background-repeat:no-repeat;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+            }
+            div.Ramen-4 {
+                background-image: url(Thumbnail__Ramen__2020_Digital\ Illustration_\ 1144px\ x\ 600px.png);
+                background-repeat:no-repeat;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+            }
+                            /* Overlay action */
+            div.overlay {
+            position: fixed;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.5);
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+            z-index: 2;
+            }
+            div.overlay:target {
+                display: flex;
+            }
+
+            a.close-overlay {
+             position: absolute;
+             top: 20px;
+                right: 20px;
+                color: white;
+                font-size: 20px;
+                text-decoration: none;
+                background: rgba(0, 0, 0, 0.7);
+                padding: 10px 15px;
+                border-radius: 5px;
+                }
+
+            div.DungeonMeshibig {
+            position: fixed;
+            display: block;
+            }
+
+            div.Gummibig {
+            position: fixed;
+            display: block;
+            }
+
+            div.Pondbig {
+            position: fixed;
+            display: block;
+            }
+
+            div.Ramenbig {
+            position: fixed;
+            display: block;
+            }
+
+        header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color:rgba(128, 136, 218, 0.2);
+        padding-left: 50px;
+      }
+      .menu{
+        text-align: right;
+        font-family:"PT-Sans";
+        font-size: 15pt;
+      }
+
+        </style>
+    </head>
+    <body>
+        <!-- nav -->
+        <header>
+            <nav class="menu">
+                <img src="Logo.png" alt="Janet Tan Logo" width="220" height="55">
+                <a href="index.html">Home</a>
+                <a href="Projects.html">Projects</a>
+                <a href="Illustrations.html">Illustrations</a>
+                <a href="Collages.html">Collages</a>
+                <a href="About.html">About</a>
+            </nav>
+        </header>
+        <!-- Thumbnail -->
+        <div class="collage_text collagepagethumbnail">
+            <div class="page_title">
+                <p class="text">ILLUSTRATIONS</p>
+                <p class="description">Digital Illustrations</p>
+            </div>
+            <!-- Overlay -->
+            <!-- 1 -->
+            <div id="overlay-DungeonMeshi" class="overlay appear">
+                <div class="DungeonMeshibig">
+                    <img src="DungeonMeshi.png" alt="DungeonMeshi" height="700" >
+                <a href="#" class="close-overlay">close</a>
+                </div>
+            </div>
+        <!-- 2 -->
+            <div id="overlay-Gummi" class="overlay appear">
+                <div class="Gummibig">
+                    <img src="Gummi.png" alt="Gummi" height="700">
+                <a href="#" class="close-overlay">close</a>
+                </div>
+            </div>
+        <!-- 3 -->
+                <div id="overlay-Pond" class="overlay appear">
+                    <div class="PondFishbig">
+                        <img src="Pond.png" alt="Pond" height="700">
+                        <a href="#" class="close-overlay">close</a>
+                    </div>
+                </div>
+        <!-- 4 -->
+                    <div id="overlay-Ramen" class="overlay appear">
+                        <div class="Ramenbig">
+                            <img src="Ramen.jpg" alt="Ramen" height="700">
+                        <a href="#" class="close-overlay">close</a>
+                    </div>
+                </div>
+
+        <!-- Illustration Gallery -->
+        <section id="artwork-grid">
+            <div class="image DungeonMeshi-1">
+                <a href="#overlay-DungeonMeshi">
+                    <div class="text_container">
+                        <p class="text">Dungeon Meshi Marcille (2024) </p>
+                    </div>
+                </a>
+            </div>
+            <div class="image Gummi-2">
+                <a href="#overlay-Gummi">
+                <div class="text_container">
+                    <p class="text"> Gummi :3 (2024) </p>
+                </div>
+                </a>
+            </div>
+            <div class="image Pond-3">
+                <a href="#overlay-Pond">
+                <div class="text_container">
+                    <p class="text"> Pond (2020) </p>
+                </div>
+                </a>
+            </div>
+            <div class="image Ramen-4">
+                <a href="#overlay-Ramen">
+                <div class="text_container">
+                    <p class="text"> Ramen (2019) </p>
+                </div>
+                </a>
+            </div>
+        </section>
+    </body>
+</html>
+

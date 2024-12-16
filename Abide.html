@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Projects-Abide</title>
+
+        <style type="text/css">
+
+            @font-face {
+        font-family:Tenor-Sans;
+        src: url(TenorSans-Regular.ttf);
+      }
+        @font-face {
+        font-family:PT-Sans;
+        src: url(PTSans-Regular.ttf);
+      }
+
+      #artwork-grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr;
+                column-gap: 74px;
+                row-gap: 65px;
+                margin-left: 100px;
+                margin-right: 100px;
+                /* z-index: 1; */
+                padding-top: 80px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                /* margin: auto; */
+            }
+
+
+            /* div.image {
+                width: 640px;
+                height: 440px;
+            } */
+
+            /* div.text_container {
+                width: 640px;
+                height: 440px;
+                font-family: Helvetica;
+                font-size: 3em;
+                color: #ffffff;
+                text-align: center;
+                background-color: rgba(128, 136, 218, 0.5);
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                display: grid;
+            }
+            div.collage_text {
+                width: 1500px;
+                height: 600px;
+                padding-bottom:80px;
+            } */
+             /* section.textbox{
+
+             } */
+             section.textbox{
+
+             }
+             div.description{
+              width: 570px;
+             }
+             h1{
+                /* width: 1500px;
+                height: 600px; */
+                font-family: Tenor-Sans;
+                color:#1232B0;
+                font-size: 60pt;
+                /* text-align: center;
+                display: grid; */
+                /* position: relative; */
+                margin:0px;
+            }
+            p{
+                font-family: PT-Sans;
+                Color: #1232B0;
+                font-size: 19pt;
+                /* padding-top: 1px; */
+            }
+            p.italics{
+                font-family: PT-Sans;
+                Color: #1232B0;
+                font-size: 20pt;
+                font-style: italic;
+                /* padding-top: 1px; */
+            }
+            p#bold{
+                font-family: PT-Sans;
+                Color: #1232B0;
+                font-size: 20pt;
+                font-style: italic;
+                font-weight: bold;
+                /* padding-top: 1px; */
+            }
+            div.text_container:hover {
+                opacity: 1;
+            }
+            p.text {
+                margin: auto;
+            }
+
+            /* div.collagepagethumbnail {
+                background-image: url(Projects_thumbnail_1500x600.png);
+                background-repeat:no-repeat;
+                padding-bottom: 80px;
+            } */
+            p#HangerAbove{
+              font-family: PT-Sans;
+                Color: #1232B0;
+                font-size: 17pt;
+                Margin:0px;
+            }
+            div.process {
+              margin-left: 100px;
+              margin-right: 100px;
+            }
+            h2{
+              font-family: PT-Sans;
+                Color: #1232B0;
+                font-size: 25pt;
+                Margin:10px;
+                width: 1200px;
+                height: 60px;
+                background-color: #edf1f9;
+                text-indent: 20px;
+                line-height: 60px;
+
+            }
+            div.AbideFull-1 {
+                /* background-image: url(Janet\ Tan_\ _ABIDE\ January\ 2025\ Calendar__Fall2023_Adobe\ Illustrator_7.5\ x\ 15_.png);
+                background-repeat:no-repeat; */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+            }
+                            /* Overlay action */
+            /* div.link {
+            position: fixed;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.5);
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+            z-index: 2;
+            }
+            div.link:target {
+                display: flex;
+            } */
+
+            /* a.close-overlay {
+             position: absolute;
+             top: 20px;
+                right: 20px;
+                color: white;
+                font-size: 20px;
+                text-decoration: none;
+                background: rgba(0, 0, 0, 0.7);
+                padding: 10px 15px;
+                border-radius: 5px;
+                } */
+
+        header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color:rgba(128, 136, 218, 0.2);
+        padding-left: 50px;
+      }
+      .menu{
+        text-align: right;
+        font-family:"Tenor-Sans";
+        font-size: 15pt;
+
+      }
+
+        </style>
+    </head>
+    <body>
+        <!-- nav -->
+        <header>
+            <nav class="menu">
+                <img src="Logo.png" alt="Janet Tan Logo" width="220" height="55">
+                <a href="index.html">Home</a>
+                <a href="Projects.html">Projects</a>
+                <a href="Illustrations.html">Illustrations</a>
+                <a href="Collages.html">Collages</a>
+                <a href="About.html">About</a>
+            </nav>
+        </header>
+        <!-- Thumbnail -->
+        <!-- <div class="collage_text collagepagethumbnail">
+            <div class="page_title">
+                <p class="text">PROJECTS</p>
+                <p class="description">Some of my favorite projects <br> I created at MassArt. </p>
+            </div> -->
+
+        <!-- Illustration Gallery -->
+        <section id="artwork-grid">
+            <div class="image AbideFull-1">
+              <img src="Janet Tan_ _ABIDE January 2025 Calendar__Fall2023_Adobe Illustrator_7.5 x 15_.png" alt="Abide" width="362px">
+                <!-- <a href="Olympic Cards.html"> -->
+                    <!-- <div class="text_container">
+                        <p class="text">Olympic Cards</p> -->
+                    </div>
+                <!-- </a> -->
+            <!-- </div> -->
+            <section class="textbox">
+                <p id="HangerAbove">Fall 2023 . TYPE I . Marlene Cole</p>
+                <h1>JANUARY 2025 CALENDAR</h1>
+            <div class="description">
+                <p>7.5 X 15 in Xerox Laser Printed on
+                  Magnani Pescia Textured Off White
+                  Designed on Adobe Illustrator by Janet Tan
+                  Typeface: ABIDE by Barrett Reid-Maroney</p>
+
+                <p class="italics"><strong>Project Objective:</strong> Design a small-poster that features significant
+                  letterforms and glyphs from your assigned typeface,
+                  ones which show off what you think makes the typeface
+                  distinct.</p>
+            </div>
+            </section>
+          </section>
+            <div class="process">
+              <h2>PROCESS</h2>
+              <img src="Abide_Process-01.png" alt="AbideProcess">
+            </div>
+
+    </body>
+</html>
+
